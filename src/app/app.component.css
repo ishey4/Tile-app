@@ -1,0 +1,8 @@
+.Column{width:50px;display: inline-block;}
+.Tile{position: relative; height: 50px;width: 50px;display: inline-block;border: 1px solid white;vertical-align: top;line-height: 50px;text-align: center;}
+.CenterDiv{position: absolute;width: 100%;text-align: center;top:calc(50% - 200px);}
+.TileID{height:45px;width:45px;line-height: 50px;text-align: center;border:1px solid black;display: inline-block;margin:2px;}
+.Tile{overflow: hidden;}
+.ButtonsClass{width: 100%;text-align: center;top: calc(50% - 250px);}
+.ButtonsClass input{margin:0px 20px;width: 80px;height: 40px;}
+.innerDiv{height:200px;width:200px;overflow: hidden;position: absolute;background-size: contain;}

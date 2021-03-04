@@ -1,0 +1,24 @@
+<meta property="og:image" content="/Tile-app/asspts/ogImage.png" />
+
+<div class="CenterDiv">
+  <div *ngIf='this.ArraysOfArrays'>
+    <div class="Column" *ngFor='let itm of this.ArraysOfArrays'>
+      <div class="Tile" *ngFor='let tile of itm'>
+        <span *ngIf="!this.BackgroundImage" class="TileID">{{tile.ID}}</span>
+        <div *ngIf='!tile.isEmpty' [ngStyle]="tile.Img" class="innerDiv" (click)="this.TileClick(tile)"></div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="ButtonsClass">
+      <input type="button" value="Solve" (click)='this.SolvePuzzle()' />
+      <input type="button" value="Shuffle" (click)='this.Shuffle()' />
+    </div>
+  <label>
+    <h2>Paste Image URL below</h2>
+    <input type="text" placeholder="Bakcground Image Location" [(ngModel)]='this.BackgroundImage' (ngModelChange)='this.getArrayOfArrays()' />
+  </label>
+
+</div>
+
+<router-outlet></router-outlet>
